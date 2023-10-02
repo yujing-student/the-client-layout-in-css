@@ -6,12 +6,54 @@
     <title>Basic Layout 9</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      body {
+        min-height: 100vh;
+        font-family: sans-serif;
+
+
+      }
+      #basic-layout-9{
+        display: grid;
+        grid-template-columns: 10em 10em 10em 10em; /*4 kolommen*/
+        grid-template-rows: 10em 10em 10em 10em 5em; /*5 rijen*/
+
+        gap: 1em;
+      }
+
+      body > * {
+        min-height: 1em;
+      }
+      header {
+        background: cyan;
+        grid-row: 1;
+        /*door 5 em in de 2de rij lijkt het beter op de afbeelding*/
+        grid-column: 0.5;
+      }
+      header > h1 {
+        margin: 0;
+      }
+      nav {
+        background: magenta;
+        grid-row: 1;
+        grid-column: 2/5;
+      }
+      main {
+        background: yellow;
+        grid-row: 2/5;
+        /*door de kolommen in het midden naar 5em te zetten past het*/
+        grid-column: 1/5;
+      }
+      footer {
+        background: black;
+        color: white;
+        grid-row: 5/6;
+        grid-column: 1/5;
+      }
     </style>
   </head>
   <body id="basic-layout-9">
     <header><h1>Basic Layout 9</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+    <nav><a href="../../index.html">Terug naar het overzicht</a></nav>
     <main></main>
     <footer></footer>
   </body>

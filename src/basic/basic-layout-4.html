@@ -7,11 +7,53 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Doe hier jouw ding! */
+      body {
+        min-height: 100vh;
+        font-family: sans-serif;
+
+
+      }
+      #basic-layout-4{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-areas:
+             "main head"
+            "main head"
+            "foot nav "
+             "foot nav"
+      ;
+        gap: 1em;
+      }
+
+      body > * {
+        min-height: 1em;
+      }
+      header {
+        background: cyan;
+        grid-area: head;
+      }
+      header > h1 {
+        margin: 0;
+      }
+      nav {
+        background: magenta;
+        grid-area: nav;
+      }
+      main {
+        background: yellow;
+        grid-area: main;
+      }
+      footer {
+        background: black;
+        color: white;
+        grid-area: foot;
+      }
     </style>
   </head>
   <body id="basic-layout-4">
     <header><h1>Basic Layout 4</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+    <nav><a href="../../index.html">Terug naar het overzicht</a></nav>
     <main></main>
     <footer></footer>
   </body>

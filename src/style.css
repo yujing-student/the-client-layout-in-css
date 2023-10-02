@@ -13,17 +13,52 @@ body > * {
 }
 header {
   background: cyan;
+  grid-row: 1;
+  grid-column: 1/5;
 }
 header > h1 {
   margin: 0;
 }
 nav {
   background: magenta;
+  grid-area: nav;
 }
 main {
   background: yellow;
+  grid-column: 2/4;
+  grid-row: 2/6;
 }
 footer {
   background: black;
   color: white;
+  grid-area: footer;
+}
+.basic-layout-1{
+  display: grid;
+  grid-template-rows: 5em 5em 5em;
+  grid-template-columns: 5em 5em;
+  grid-template-areas:
+            "header"
+            "nav main"
+            "footer";
+}
+
+#basic-layout-1 > header {
+  grid-area: head;
+  background-color: #8ca0ff;
+}
+
+#basic-layout-1 > nav {
+  grid-area: nav;
+  background-color: #ffa08c;
+}
+
+#basic-layout-1 > main {
+  grid-area: main;
+  background-color: #ffff64;
+}
+
+#basic-layout-1 > footer {
+  grid-area: foot;
+  background-color: #8cffa0;
 }
