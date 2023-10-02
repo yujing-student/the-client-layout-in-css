@@ -7,6 +7,74 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Doe hier jouw ding! */
+      #advanced-layout-4{
+        display: grid;
+        grid-template-columns: 5em 5em 5em 5em; /*4 kolommen*/
+        grid-template-rows: 1em 5em 5em 5em 1em; /*5 rijen*/
+        gap: 1em;
+      }
+      body > * {
+        min-height: 1em;
+      }
+      header {
+        background: cyan;
+        clip-path: polygon(
+          /*het percentage is het knippblok*/
+          /*links en rechts van de vierhoek*/
+                0% -1%,
+                102% 0%,
+                131%65%,
+                0% 85%
+        );
+        grid-row: 1/4;
+        grid-column: 2/3;
+
+      }
+      header > h1 {
+        margin: 0;
+      }
+      nav {
+        background: magenta;
+        grid-row: 1/4;
+        /*overlappen*/
+        grid-column: 1/2;
+        clip-path: polygon(
+
+                0% -1%,
+                102% 0%,
+                131%65%,
+                0% 85%
+        );
+      }
+      main {
+        background: yellow;
+        grid-row: 3/6;
+        grid-column: 1/2;
+        clip-path: polygon(
+          /*het percentage is het knippblok*/
+          /*links en rechts van de vierhoek*/
+                -294% 69%,
+                100% 15%,
+                102% 117%,
+                -5% 104%
+        );
+      }
+      footer {
+        background: black;
+        color: white;
+        clip-path: polygon(
+          /*het percentage is het knippblok*/
+          /*links en rechts van de vierhoek*/
+          /*als je op het getall 100% klikt in inspector dan kan je met je muiswiel gaan rollen en geen pijtljes*/
+                -294% 69%,
+                100% 15%,
+                102% 117%,
+                -5% 104%
+        );
+        grid-row: 3/6;
+        grid-column: 2/3;
+        /*grid-area: foot;*/
+      }
     </style>
   </head>
   <body id="advanced-layout-4">
