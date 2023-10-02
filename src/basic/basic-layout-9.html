@@ -15,7 +15,7 @@
       #basic-layout-9{
         display: grid;
         grid-template-columns: 5em 5em 5em 5em; /*4 kolommen*/
-        grid-template-rows: 5em  2.5em 5em 5em; /*4 rijen*/
+        grid-template-rows: 5em  5em 5em; /*3 rijen*/
 
         gap: 1em; /*  afstand tussen elementen*/
       }
@@ -26,8 +26,7 @@
       header {
         background: cyan;
         grid-row: 1;
-
-        grid-column: 0.5;
+        grid-column: 1;
       }
       header > h1 {
         margin: 0;
@@ -46,7 +45,7 @@
       footer {
         background: black;
         color: white;
-        grid-row: 5/6;
+        grid-row: 5;
         grid-column: 1/5;
       }
     </style>
